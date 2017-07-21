@@ -1,0 +1,63 @@
+.header {
+    
+    height:80px;
+    background:black;
+    position:relative;
+    z-index:2;
+
+    &__title {
+        
+        color:white;
+        font-size:35px;
+        margin:20px 0 0 80px;
+        display:inline-block;
+        font-family:"raleway";
+        
+    }
+    
+    &__logo {
+        position:absolute;
+        height:30px;
+        width:30px;
+        top:20px;
+        left:25px;
+        background:#999;
+        border:3px solid white;
+        transform-origin:50% 50%;
+        transform: rotate(45deg);    
+    }
+    
+    &__nav {
+        
+        display:inline-block;
+        margin:30px 10px 0 0;
+        float:right;
+        
+        &__ul {
+            display:block;
+        }
+        
+        &__li {
+            list-style: none;
+            float:Left;
+        }
+        
+        &__a {
+            color:white;
+            text-decoration: none;
+            padding:7px 25px;
+            font-family: "Raleway";
+            font-weight: 900;
+        }
+        
+        &__a-last {
+            color:red;
+        }
+        
+        &__a:hover {
+            
+        }
+        
+    }
+
+}

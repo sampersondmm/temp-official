@@ -1,0 +1,61 @@
+.body-img {
+    
+    border:1px solid black;
+    background-image: url(/assets/images/texture.jpg);
+    background-image: repeat;
+    
+    &__main {
+        
+        width:800px;
+        height:800px;
+        margin:auto;
+        margin-top:50px;
+        margin-bottom: 50px;
+        background: white;
+        box-shadow: 10px 10px 20px #555;
+        
+        
+        &__main-left {
+            
+            width:500px;
+            padding:50px;
+            padding-right:0;
+            float:Left;
+            
+            &__h1 {
+                 font-family:"trebuchet MS";
+            }
+            
+            &__p {
+                 font-family:"trebuchet MS";
+            }
+            
+        }
+        
+        &__main-right {
+            
+            float:left;
+            padding:50px;
+            
+            &__h1 {
+                font-family:"trebuchet MS";
+
+            }
+            
+            &__ul {
+                
+            }
+            
+            &__a {
+                text-decoration: none;
+                font-family:"trebuchet MS";
+                font-weight:1000;
+                font-size:13px;
+                color:black;
+            }
+            
+        }
+        
+    }
+    
+}

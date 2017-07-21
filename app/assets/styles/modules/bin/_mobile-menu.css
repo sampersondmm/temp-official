@@ -1,0 +1,156 @@
+.mobile-menu-bin {    
+    position:relative;
+    z-index:3;
+    
+
+    &__menu-icon {
+        position:absolute;
+        height:24px;
+        width:30px;
+        right:20px;
+        top:-33px;
+        
+        @mixin atMedium {
+            top:-50px;
+            right:30px;
+        }
+        
+        @mixin atLarge {
+            display:none;
+        }
+        
+        
+        &::before {
+            content:"";
+            height:4px;
+            top:0px;
+            position:absolute;
+            width:100%;
+            background:black;
+            transform-origin: 0 0;
+        }
+        
+        &__middle {
+            height:4px;
+            width:100%;
+            position:absolute;
+            top:10px;
+            background:black;
+            transform-origin: 50% 0;
+            
+        }
+        
+        &::after {
+            content:"";
+            height:4px;
+            position:absolute;
+            bottom:0px;
+            width:100%;
+            background:black;
+            transform-origin:100% 0;
+        }
+        
+    }
+    
+    
+    &__menu-icon:hover {
+        position:absolute;
+        height:24px;
+        width:32px;
+        right:19px;
+        top:-33px;
+        
+        @mixin atMedium {
+            top:-50px;
+            right:30px;
+        }
+        
+        @mixin atLarge {
+            display:none;
+        }
+        
+        
+        &::before {
+            content:"";
+            height:5px;
+            top:0px;
+            position:absolute;
+            width:100%;
+            background:black;
+            transform-origin: 0 0;
+        }
+        
+        &__middle {
+            height:5px;
+            position:absolute;
+            top:10px;
+            background:black;
+            transform-origin: 50% 0;
+            
+        }
+        
+        &::after {
+            content:"";
+            height:5px;
+            position:absolute;
+            bottom:0px;
+            width:100%;
+            background:black;
+            transform-origin:100% 0;
+        }
+        
+    }
+    
+    
+    &__menu-content {
+        
+        display:none;
+        position:absolute;
+        width:200px;
+        background:#c1c2be;
+        padding:10px;
+        height:0;
+        top:0px;
+        left:30%;
+        text-align:center;
+        z-index:5;
+        border-top:1px solid #999;
+        
+                
+        
+        @mixin atMedium {
+            width:300px;
+        }
+        
+        &__li {
+            list-style:none;
+            
+        }
+        
+        &__a {
+            background:#c1c2be;
+            text-decoration:none;
+            display:block;
+            border-bottom:1px solid #888;
+            color:black;
+            padding:7px 15px;
+            
+            &--last {
+                border-bottom:none;
+            }
+            
+            &:hover {
+                color:white;
+                font-weight:500;
+                padding:10px 15px;
+            }
+        }
+            
+        &--is-visible {
+            display:block;
+            height:auto;
+        }
+    }
+        
+    
+}

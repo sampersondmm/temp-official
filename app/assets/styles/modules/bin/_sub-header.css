@@ -1,0 +1,30 @@
+.sub-header-bin {
+    width:100%;
+    height:40px;
+    border:1px solid #c1c2be;
+    background: #c1c2be;
+    
+    @mixin atMedium {
+        height:70px;
+    }
+    
+    @mixin atLarge {
+        height:85px;
+    }
+    
+    &__title {
+        text-align: center;
+        margin-top:5px;
+        font-size:23px;
+        
+        @mixin atMedium {
+            margin-top:15px;
+            font-size:30px;
+        }
+        @mixin atLarge {
+            margin-top:27px;
+            font-size:33px;
+        }
+    }
+    
+}

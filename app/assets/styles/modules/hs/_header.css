@@ -1,0 +1,55 @@
+.header-hs {
+    padding-top:10px;
+    width: 100%;
+    background:white;
+    height: 200px;
+    border-bottom:1px solid black;
+     
+    @mixin atMedium {
+        height:100px;
+        background:#333;
+    }
+    
+    &__title-box {
+        
+        border:1px solid white;
+        display:inline-block;
+        
+        &__title {
+                
+        }
+    }
+ 
+    
+    &__menu-content {
+        display:none;
+        
+    
+        
+        @mixin atMedium {
+            display:block;
+            border:3px solid red;
+            
+        }
+        
+    }
+    
+    &__nav-li {        
+        @mixin atMedium {
+            list-style: none;
+            float:left;
+        }
+
+    }
+    
+    &__nav-a {
+        @mixin atMedium {
+            color:white;
+            border:none;
+            text-decoration: none;
+            margin: 7px 15px;
+            display:block;
+        }
+    }
+
+}

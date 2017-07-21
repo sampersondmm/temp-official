@@ -1,0 +1,73 @@
+.body-jt {
+    
+    width:100%;
+    background-image: url(/assets/images/texture.jpg);
+    background-image: repeat;
+    overflow-y: auto;
+    
+ 
+    
+    &__main {
+        
+        width:90%;
+        max-width:1000px;
+        margin:0 auto;
+        margin-top:20px;
+        margin-bottom:20px;
+        
+     
+        &-1 {
+            padding:20px;
+            background:white;
+            
+            @mixin atMedium {
+                width:750px;
+                margin:0 auto;
+            }
+            
+            @mixin atLarge {
+                float:left;
+                margin-right:20px;
+            }
+            
+            &-centered {
+                
+                &-title {
+                    text-align: center;
+                }
+                
+                &-subtitle {
+                    text-align: center;
+                }
+                
+                &-title-2 {
+                    text-align: center;
+                }
+                
+                &-p1 {
+                    text-align: center;
+                }
+                
+                &-p2 {
+                    text-align: center;
+                }
+            }
+        }
+
+        
+        &-side {
+            
+            display:none;
+            
+            @mixin atLarge {
+                display:block;
+                width:20%;
+                max-width:480px;
+                float:right;
+                height:800px;
+                background:transparent;
+            }
+        }
+    }
+    
+}

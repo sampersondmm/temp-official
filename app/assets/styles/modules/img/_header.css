@@ -1,0 +1,295 @@
+.header-img {
+    
+    /*&__art-box {
+        
+        &__box-1 {
+            position:absolute;
+            height:100px;
+            width:100px;
+            top:40px;
+            left:50px;
+            background:white;
+            z-index:10;
+            border:2px solid black;
+        }
+        
+        &__box-2 {
+            position:absolute;
+            height:60px;
+            width:140px;
+            top:90px;
+            left:120px;
+            background:white;
+            z-index:8;
+            border:1px solid black;
+        }
+        
+        &__box-3 {
+            position:absolute;
+            height:170px;
+            width:25px;
+            top:70px;
+            left:35px;
+            background:white;
+            z-index:8;
+        }
+        
+        &__box-4 {
+            position:absolute;
+            height:30px;
+            width:30px;
+            top:10px;
+            left:10px;
+            background:white;
+            z-index:8;
+            border:1px solid black;
+        }
+        
+        &__box-5 {
+            position:absolute;
+            height:15px;
+            width:15px;
+            top:30px;
+            left:160px;
+            background:white;
+            z-index:8;
+            border:1px solid black;
+        }
+        
+        &__box-6 {
+            position:absolute;
+            height:15px;
+            width:160px;
+            top:80px;
+            left:200px;
+            background:white;
+            z-index:7;
+            border:1px solid black;
+        }
+        
+    }*/
+    
+    /*&__art-box-2 {
+       &__box-1 {
+            position:absolute;
+            height:90px;
+            width:90px;
+            top:40px;
+            left:50px;
+            background:white;
+            z-index:10;
+            border:3px solid black;
+        }
+        
+        &__box-2 {
+            position:absolute;
+            height:60px;
+            width:100px;
+            top:80px;
+            left:160px;
+            background:white;
+            z-index:8;
+            border:1px solid black;
+        }
+        
+        &__box-3 {
+            position:absolute;
+            height:80px;
+            width:50px;
+            top:140px;
+            left:100px;
+            background:white;
+            z-index:8;
+            border:1px solid black;
+        }
+        
+        &__box-4 {
+            position:absolute;
+            height:40px;
+            width:110px;
+            top:120px;
+            left:80px;
+            background:white;
+            z-index:7;
+            border:1px solid black;
+        }
+        
+        &__box-5 {
+            position:absolute;
+            height:50px;
+            width:40px;
+            top:60px;
+            left:140px;
+            background:white;
+            z-index:7;
+            border:1px solid black;
+        }
+        
+        &__box-6 {
+            position:absolute;
+            height:150px;
+            width:30px;
+            top:110px;
+            left:30px;
+            background:white;
+            z-index:7;
+            border:1px solid black;
+        } 
+        
+        &__box-7 {
+            position:absolute;
+            height:25px;
+            width:120px;
+            top:70px;
+            left:230px;
+            background:white;
+            z-index:7;
+            border:1px solid black;
+        } 
+        
+        &__box-8 {
+            position:absolute;
+            height:180px;
+            width:10px;
+            top:170px;
+            left:25px;
+            background:white;
+            z-index:7;
+            border:1px solid black;
+        } 
+        
+        &__box-9 {
+            position:absolute;
+            height:10px;
+            width:150px;
+            top:65px;
+            left:300px;
+            background:white;
+            z-index:6;
+            border:1px solid black;
+        }
+        
+        &__box-10 {
+            position:absolute;
+            height:30px;
+            width:30px;
+            top:10px;
+            left:10px;
+            background:white;
+            z-index:7;
+            border:1px solid black;
+        }
+    }
+    */
+    
+    &__icons {
+        
+        &__icon-1 {
+            
+            position:absolute;
+            width:40px;
+            height:40px;
+            top:80px;
+            right:20px;
+            border-radius:50%;
+            background:white;
+            
+        }
+        
+        &__icon-2 {
+            
+            position:absolute;
+            width:40px;
+            height:40px;
+            top:80px;
+            right:80px;
+            border-radius:50%;
+            background:white;
+            
+        }
+        
+        &__icon-3 {
+            
+            position:absolute;
+            width:40px;
+            height:40px;
+            top:80px;
+            right:140px;
+            border-radius:50%;
+            background:white;
+            
+        }
+    }
+    
+    &__top {
+        
+        border:1px solid black;
+        height:100px;
+        background:black;
+        
+        &__title-box {
+            
+            text-align: center;
+            margin-top:15px;
+            
+            &__title {
+                color:white;
+                font-family:"trebuchet MS";
+              
+            }
+        
+            &__sub-title {
+                color:#999;
+                font-size:15px;
+                font-family:"trebuchet MS";
+            }
+            
+        }
+        
+    }
+    
+    &__pic {
+        
+        overflow:hidden;
+     
+        &__img {
+            width:1300px;
+            
+        }
+     
+    }
+    
+    &__nav {
+        border:1px solid black;
+        border-top:none;
+        background:linear-gradient(#777,#333);
+        height:40px;
+        margin-top:-5px;
+        text-align: center;
+
+        
+        &-ul {
+            margin:auto;
+            display: inline-block;
+        }
+        
+        &-li {
+            float:left;
+            list-style:none;
+            font-family:"trebuchet MS";
+            font-weight: 100;
+        }
+        
+        &-a {
+            display:inline-block;
+            padding: 10px 15px;
+            color:white;
+        }
+        
+        &-a:hover {
+            background:white;
+            color:#333;
+        }
+    }
+    
+}

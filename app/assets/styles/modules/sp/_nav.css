@@ -1,0 +1,42 @@
+.nav-sp {
+    text-align: center;
+    display:none;
+    position:relative;
+    background: white;
+    
+    @mixin atLarge {
+        display:block;
+    }
+    
+        &__ul {
+            display:inline-block;
+            float:right;
+            height:35px;
+            margin-top: -10px;
+            background:$A-grey3;
+
+        &__li {
+            list-style: none;
+            float:left;
+            display:block;
+            margin-right:20px;
+        }
+
+        &__a {
+            display:inline-block;
+            padding:7px 20px;
+            position:relative;
+            background:$A-grey3;
+            font-weight:300;
+            text-decoration: none;
+            z-index:2;
+            color:black;
+        }
+
+        &__a:hover {
+            border-bottom:3px solid $code-black;
+        }
+    
+    }
+    
+}
