@@ -1,0 +1,28 @@
+.nav-en {
+  position: fixed;
+  z-index: 3;
+  right:30px;
+  top:110px;
+  display:inline-block;
+
+
+
+  &__ul {
+    &__li {
+      float:right;
+      list-style: none;
+
+      &__a {
+        text-decoration: none;
+        color:white;
+        display: block;
+        padding:7px 15px;
+        font-size: 15px;
+
+        &--color-change {
+          color:#777;
+        }
+      }
+    }
+  }
+}

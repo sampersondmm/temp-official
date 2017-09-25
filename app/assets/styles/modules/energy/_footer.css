@@ -1,0 +1,54 @@
+.footer-en {
+  height:440px;
+  width:100%;
+  background:#777;
+
+  &__contact-box {
+    width:255px;
+    position: fixed;
+    bottom:5px;
+    right:5px;
+
+
+    &__email {
+      height:38px;
+      background:$en-green-contact;
+      margin-bottom: 3px;
+      border-radius: 4px;
+      border: 1px solid $en-green-contact;
+
+      &__icon {
+        color:white;
+        margin:12px 0 0 15px;
+      }
+
+      &:hover {
+        background:$en-green-contact2;
+        border: 1px solid $en-green-contact;
+      }
+    }
+
+    &__phone {
+      height:38px;
+      background: #888;
+      border:1px solid rgb(190,190,190);
+      border-radius: 4px;
+
+      &__icon {
+        color:white;
+        margin:12px 0 0 15px;
+      }
+
+      &:hover {
+        background:$en-green-contact2;
+      }
+    }
+  }
+}
+
+.p-small {
+  color:white;
+  font-size:13px;
+  display: inline-block;
+  margin:10px 0 10px 15px;
+}

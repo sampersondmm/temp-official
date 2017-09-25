@@ -60,75 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _MobileMenu = __webpack_require__(1);
-
-var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mobileMenu = new _MobileMenu2.default();
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(2);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobileMenu = function () {
-    function MobileMenu() {
-        _classCallCheck(this, MobileMenu);
-
-        this.menuScreen = (0, _jquery2.default)(".body-bin");
-        this.menuIcon = (0, _jquery2.default)(".mobile-menu-bin__menu-icon");
-        this.menuContent = (0, _jquery2.default)(".mobile-menu-bin__menu-content");
-        this.events();
-    }
-
-    _createClass(MobileMenu, [{
-        key: "events",
-        value: function events() {
-            this.menuIcon.click(this.toggleTheMenu.bind(this));
-        }
-    }, {
-        key: "toggleTheMenu",
-        value: function toggleTheMenu() {
-            this.menuContent.toggleClass("mobile-menu-bin__menu-content--is-visible");
-            this.menuScreen.toggleClass("body-bin--is-screened");
-        }
-    }]);
-
-    return MobileMenu;
-}();
-
-exports.default = MobileMenu;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10386,6 +10322,1161 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _MobileMenu = __webpack_require__(2);
+
+var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
+
+var _StickyHeader = __webpack_require__(3);
+
+var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
+
+var _SlideShow = __webpack_require__(5);
+
+var _SlideShow2 = _interopRequireDefault(_SlideShow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mobileMenu = new _MobileMenu2.default();
+var stickyHeader = new _StickyHeader2.default();
+var slideShow = new _SlideShow2.default();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+    function MobileMenu() {
+        _classCallCheck(this, MobileMenu);
+
+        this.menuScreen = (0, _jquery2.default)(".body-bin");
+        this.menuIcon = (0, _jquery2.default)(".mobile-menu-bin__menu-icon");
+        this.menuContent = (0, _jquery2.default)(".mobile-menu-bin__menu-content");
+        this.events();
+    }
+
+    _createClass(MobileMenu, [{
+        key: "events",
+        value: function events() {
+            this.menuIcon.click(this.toggleTheMenu.bind(this));
+        }
+    }, {
+        key: "toggleTheMenu",
+        value: function toggleTheMenu() {
+            this.menuContent.toggleClass("mobile-menu-bin__menu-content--is-visible");
+            this.menuScreen.toggleClass("body-bin--is-screened");
+            this.menuIcon.toggleClass('mobile-menu-bin__menu-icon--close-x');
+        }
+    }]);
+
+    return MobileMenu;
+}();
+
+exports.default = MobileMenu;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframework = __webpack_require__(4);
+
+var _noframework2 = _interopRequireDefault(_noframework);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StickyHeader = function () {
+  function StickyHeader() {
+    _classCallCheck(this, StickyHeader);
+
+    this.header = (0, _jquery2.default)(".header-en");
+    this.searchBar = (0, _jquery2.default)(".header-en__search__bar");
+    this.logoText = (0, _jquery2.default)(".header-en__logo__text");
+    this.logoSubText = (0, _jquery2.default)(".header-en__logo__sub-text");
+    this.navA = (0, _jquery2.default)(".nav-en__ul__li__a");
+    this.logoBox1 = (0, _jquery2.default)(".header-en__logo__box1");
+    this.logoBox2 = (0, _jquery2.default)(".header-en__logo__box2");
+    this.logoBox3 = (0, _jquery2.default)(".header-en__logo__box3");
+    this.logoBox4 = (0, _jquery2.default)(".header-en__logo__box4");
+    this.logoBox5 = (0, _jquery2.default)(".header-en__logo__box5");
+    this.logoBox6 = (0, _jquery2.default)(".header-en__logo__box6");
+    this.searchIcon = (0, _jquery2.default)(".header-en__search__icon");
+    this.anchor = (0, _jquery2.default)(".waypoint-anchor");
+    this.createWaypoints();
+  }
+
+  _createClass(StickyHeader, [{
+    key: 'createWaypoints',
+    value: function createWaypoints() {
+      var that = this;
+      new Waypoint({
+        element: this.anchor[0],
+        handler: function handler(direction) {
+          if (direction == "down") {
+            that.header.addClass("header-en--color-change");
+            that.searchBar.addClass("header-en__search__bar--color-change");
+            that.logoText.addClass("header-en__logo__text--color-change");
+            that.logoSubText.addClass("header-en__logo__sub-text--color-change");
+            that.navA.addClass("nav-en__ul__li__a--color-change");
+            that.logoBox1.addClass("header-en__logo__box1--color-change");
+            that.logoBox2.addClass("header-en__logo__box2--color-change");
+            that.logoBox3.addClass("header-en__logo__box3--color-change");
+            that.logoBox4.addClass("header-en__logo__box4--color-change");
+            that.logoBox5.addClass("header-en__logo__box5--color-change");
+            that.logoBox6.addClass("header-en__logo__box6--color-change");
+            that.searchIcon.addClass("header-en__search__icon--color-change");
+          } else {
+            that.header.removeClass("header-en--color-change");
+            that.searchBar.removeClass("header-en__search__bar--color-change");
+            that.logoText.removeClass("header-en__logo__text--color-change");
+            that.logoSubText.removeClass("header-en__logo__sub-text--color-change");
+            that.navA.removeClass("nav-en__ul__li__a--color-change");
+            that.logoBox1.removeClass("header-en__logo__box1--color-change");
+            that.logoBox2.removeClass("header-en__logo__box2--color-change");
+            that.logoBox3.removeClass("header-en__logo__box3--color-change");
+            that.logoBox4.removeClass("header-en__logo__box4--color-change");
+            that.logoBox5.removeClass("header-en__logo__box5--color-change");
+            that.logoBox6.removeClass("header-en__logo__box6--color-change");
+            that.searchIcon.removeClass("header-en__search__icon--color-change");
+          }
+        }
+      });
+    }
+  }]);
+
+  return StickyHeader;
+}();
+
+exports.default = StickyHeader;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+/*!
+Waypoints - 4.0.1
+Copyright © 2011-2016 Caleb Troughton
+Licensed under the MIT license.
+https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
+*/
+(function() {
+  'use strict'
+
+  var keyCounter = 0
+  var allWaypoints = {}
+
+  /* http://imakewebthings.com/waypoints/api/waypoint */
+  function Waypoint(options) {
+    if (!options) {
+      throw new Error('No options passed to Waypoint constructor')
+    }
+    if (!options.element) {
+      throw new Error('No element option passed to Waypoint constructor')
+    }
+    if (!options.handler) {
+      throw new Error('No handler option passed to Waypoint constructor')
+    }
+
+    this.key = 'waypoint-' + keyCounter
+    this.options = Waypoint.Adapter.extend({}, Waypoint.defaults, options)
+    this.element = this.options.element
+    this.adapter = new Waypoint.Adapter(this.element)
+    this.callback = options.handler
+    this.axis = this.options.horizontal ? 'horizontal' : 'vertical'
+    this.enabled = this.options.enabled
+    this.triggerPoint = null
+    this.group = Waypoint.Group.findOrCreate({
+      name: this.options.group,
+      axis: this.axis
+    })
+    this.context = Waypoint.Context.findOrCreateByElement(this.options.context)
+
+    if (Waypoint.offsetAliases[this.options.offset]) {
+      this.options.offset = Waypoint.offsetAliases[this.options.offset]
+    }
+    this.group.add(this)
+    this.context.add(this)
+    allWaypoints[this.key] = this
+    keyCounter += 1
+  }
+
+  /* Private */
+  Waypoint.prototype.queueTrigger = function(direction) {
+    this.group.queueTrigger(this, direction)
+  }
+
+  /* Private */
+  Waypoint.prototype.trigger = function(args) {
+    if (!this.enabled) {
+      return
+    }
+    if (this.callback) {
+      this.callback.apply(this, args)
+    }
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/destroy */
+  Waypoint.prototype.destroy = function() {
+    this.context.remove(this)
+    this.group.remove(this)
+    delete allWaypoints[this.key]
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/disable */
+  Waypoint.prototype.disable = function() {
+    this.enabled = false
+    return this
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/enable */
+  Waypoint.prototype.enable = function() {
+    this.context.refresh()
+    this.enabled = true
+    return this
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/next */
+  Waypoint.prototype.next = function() {
+    return this.group.next(this)
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/previous */
+  Waypoint.prototype.previous = function() {
+    return this.group.previous(this)
+  }
+
+  /* Private */
+  Waypoint.invokeAll = function(method) {
+    var allWaypointsArray = []
+    for (var waypointKey in allWaypoints) {
+      allWaypointsArray.push(allWaypoints[waypointKey])
+    }
+    for (var i = 0, end = allWaypointsArray.length; i < end; i++) {
+      allWaypointsArray[i][method]()
+    }
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/destroy-all */
+  Waypoint.destroyAll = function() {
+    Waypoint.invokeAll('destroy')
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/disable-all */
+  Waypoint.disableAll = function() {
+    Waypoint.invokeAll('disable')
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/enable-all */
+  Waypoint.enableAll = function() {
+    Waypoint.Context.refreshAll()
+    for (var waypointKey in allWaypoints) {
+      allWaypoints[waypointKey].enabled = true
+    }
+    return this
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/refresh-all */
+  Waypoint.refreshAll = function() {
+    Waypoint.Context.refreshAll()
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/viewport-height */
+  Waypoint.viewportHeight = function() {
+    return window.innerHeight || document.documentElement.clientHeight
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/viewport-width */
+  Waypoint.viewportWidth = function() {
+    return document.documentElement.clientWidth
+  }
+
+  Waypoint.adapters = []
+
+  Waypoint.defaults = {
+    context: window,
+    continuous: true,
+    enabled: true,
+    group: 'default',
+    horizontal: false,
+    offset: 0
+  }
+
+  Waypoint.offsetAliases = {
+    'bottom-in-view': function() {
+      return this.context.innerHeight() - this.adapter.outerHeight()
+    },
+    'right-in-view': function() {
+      return this.context.innerWidth() - this.adapter.outerWidth()
+    }
+  }
+
+  window.Waypoint = Waypoint
+}())
+;(function() {
+  'use strict'
+
+  function requestAnimationFrameShim(callback) {
+    window.setTimeout(callback, 1000 / 60)
+  }
+
+  var keyCounter = 0
+  var contexts = {}
+  var Waypoint = window.Waypoint
+  var oldWindowLoad = window.onload
+
+  /* http://imakewebthings.com/waypoints/api/context */
+  function Context(element) {
+    this.element = element
+    this.Adapter = Waypoint.Adapter
+    this.adapter = new this.Adapter(element)
+    this.key = 'waypoint-context-' + keyCounter
+    this.didScroll = false
+    this.didResize = false
+    this.oldScroll = {
+      x: this.adapter.scrollLeft(),
+      y: this.adapter.scrollTop()
+    }
+    this.waypoints = {
+      vertical: {},
+      horizontal: {}
+    }
+
+    element.waypointContextKey = this.key
+    contexts[element.waypointContextKey] = this
+    keyCounter += 1
+    if (!Waypoint.windowContext) {
+      Waypoint.windowContext = true
+      Waypoint.windowContext = new Context(window)
+    }
+
+    this.createThrottledScrollHandler()
+    this.createThrottledResizeHandler()
+  }
+
+  /* Private */
+  Context.prototype.add = function(waypoint) {
+    var axis = waypoint.options.horizontal ? 'horizontal' : 'vertical'
+    this.waypoints[axis][waypoint.key] = waypoint
+    this.refresh()
+  }
+
+  /* Private */
+  Context.prototype.checkEmpty = function() {
+    var horizontalEmpty = this.Adapter.isEmptyObject(this.waypoints.horizontal)
+    var verticalEmpty = this.Adapter.isEmptyObject(this.waypoints.vertical)
+    var isWindow = this.element == this.element.window
+    if (horizontalEmpty && verticalEmpty && !isWindow) {
+      this.adapter.off('.waypoints')
+      delete contexts[this.key]
+    }
+  }
+
+  /* Private */
+  Context.prototype.createThrottledResizeHandler = function() {
+    var self = this
+
+    function resizeHandler() {
+      self.handleResize()
+      self.didResize = false
+    }
+
+    this.adapter.on('resize.waypoints', function() {
+      if (!self.didResize) {
+        self.didResize = true
+        Waypoint.requestAnimationFrame(resizeHandler)
+      }
+    })
+  }
+
+  /* Private */
+  Context.prototype.createThrottledScrollHandler = function() {
+    var self = this
+    function scrollHandler() {
+      self.handleScroll()
+      self.didScroll = false
+    }
+
+    this.adapter.on('scroll.waypoints', function() {
+      if (!self.didScroll || Waypoint.isTouch) {
+        self.didScroll = true
+        Waypoint.requestAnimationFrame(scrollHandler)
+      }
+    })
+  }
+
+  /* Private */
+  Context.prototype.handleResize = function() {
+    Waypoint.Context.refreshAll()
+  }
+
+  /* Private */
+  Context.prototype.handleScroll = function() {
+    var triggeredGroups = {}
+    var axes = {
+      horizontal: {
+        newScroll: this.adapter.scrollLeft(),
+        oldScroll: this.oldScroll.x,
+        forward: 'right',
+        backward: 'left'
+      },
+      vertical: {
+        newScroll: this.adapter.scrollTop(),
+        oldScroll: this.oldScroll.y,
+        forward: 'down',
+        backward: 'up'
+      }
+    }
+
+    for (var axisKey in axes) {
+      var axis = axes[axisKey]
+      var isForward = axis.newScroll > axis.oldScroll
+      var direction = isForward ? axis.forward : axis.backward
+
+      for (var waypointKey in this.waypoints[axisKey]) {
+        var waypoint = this.waypoints[axisKey][waypointKey]
+        if (waypoint.triggerPoint === null) {
+          continue
+        }
+        var wasBeforeTriggerPoint = axis.oldScroll < waypoint.triggerPoint
+        var nowAfterTriggerPoint = axis.newScroll >= waypoint.triggerPoint
+        var crossedForward = wasBeforeTriggerPoint && nowAfterTriggerPoint
+        var crossedBackward = !wasBeforeTriggerPoint && !nowAfterTriggerPoint
+        if (crossedForward || crossedBackward) {
+          waypoint.queueTrigger(direction)
+          triggeredGroups[waypoint.group.id] = waypoint.group
+        }
+      }
+    }
+
+    for (var groupKey in triggeredGroups) {
+      triggeredGroups[groupKey].flushTriggers()
+    }
+
+    this.oldScroll = {
+      x: axes.horizontal.newScroll,
+      y: axes.vertical.newScroll
+    }
+  }
+
+  /* Private */
+  Context.prototype.innerHeight = function() {
+    /*eslint-disable eqeqeq */
+    if (this.element == this.element.window) {
+      return Waypoint.viewportHeight()
+    }
+    /*eslint-enable eqeqeq */
+    return this.adapter.innerHeight()
+  }
+
+  /* Private */
+  Context.prototype.remove = function(waypoint) {
+    delete this.waypoints[waypoint.axis][waypoint.key]
+    this.checkEmpty()
+  }
+
+  /* Private */
+  Context.prototype.innerWidth = function() {
+    /*eslint-disable eqeqeq */
+    if (this.element == this.element.window) {
+      return Waypoint.viewportWidth()
+    }
+    /*eslint-enable eqeqeq */
+    return this.adapter.innerWidth()
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/context-destroy */
+  Context.prototype.destroy = function() {
+    var allWaypoints = []
+    for (var axis in this.waypoints) {
+      for (var waypointKey in this.waypoints[axis]) {
+        allWaypoints.push(this.waypoints[axis][waypointKey])
+      }
+    }
+    for (var i = 0, end = allWaypoints.length; i < end; i++) {
+      allWaypoints[i].destroy()
+    }
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/context-refresh */
+  Context.prototype.refresh = function() {
+    /*eslint-disable eqeqeq */
+    var isWindow = this.element == this.element.window
+    /*eslint-enable eqeqeq */
+    var contextOffset = isWindow ? undefined : this.adapter.offset()
+    var triggeredGroups = {}
+    var axes
+
+    this.handleScroll()
+    axes = {
+      horizontal: {
+        contextOffset: isWindow ? 0 : contextOffset.left,
+        contextScroll: isWindow ? 0 : this.oldScroll.x,
+        contextDimension: this.innerWidth(),
+        oldScroll: this.oldScroll.x,
+        forward: 'right',
+        backward: 'left',
+        offsetProp: 'left'
+      },
+      vertical: {
+        contextOffset: isWindow ? 0 : contextOffset.top,
+        contextScroll: isWindow ? 0 : this.oldScroll.y,
+        contextDimension: this.innerHeight(),
+        oldScroll: this.oldScroll.y,
+        forward: 'down',
+        backward: 'up',
+        offsetProp: 'top'
+      }
+    }
+
+    for (var axisKey in axes) {
+      var axis = axes[axisKey]
+      for (var waypointKey in this.waypoints[axisKey]) {
+        var waypoint = this.waypoints[axisKey][waypointKey]
+        var adjustment = waypoint.options.offset
+        var oldTriggerPoint = waypoint.triggerPoint
+        var elementOffset = 0
+        var freshWaypoint = oldTriggerPoint == null
+        var contextModifier, wasBeforeScroll, nowAfterScroll
+        var triggeredBackward, triggeredForward
+
+        if (waypoint.element !== waypoint.element.window) {
+          elementOffset = waypoint.adapter.offset()[axis.offsetProp]
+        }
+
+        if (typeof adjustment === 'function') {
+          adjustment = adjustment.apply(waypoint)
+        }
+        else if (typeof adjustment === 'string') {
+          adjustment = parseFloat(adjustment)
+          if (waypoint.options.offset.indexOf('%') > - 1) {
+            adjustment = Math.ceil(axis.contextDimension * adjustment / 100)
+          }
+        }
+
+        contextModifier = axis.contextScroll - axis.contextOffset
+        waypoint.triggerPoint = Math.floor(elementOffset + contextModifier - adjustment)
+        wasBeforeScroll = oldTriggerPoint < axis.oldScroll
+        nowAfterScroll = waypoint.triggerPoint >= axis.oldScroll
+        triggeredBackward = wasBeforeScroll && nowAfterScroll
+        triggeredForward = !wasBeforeScroll && !nowAfterScroll
+
+        if (!freshWaypoint && triggeredBackward) {
+          waypoint.queueTrigger(axis.backward)
+          triggeredGroups[waypoint.group.id] = waypoint.group
+        }
+        else if (!freshWaypoint && triggeredForward) {
+          waypoint.queueTrigger(axis.forward)
+          triggeredGroups[waypoint.group.id] = waypoint.group
+        }
+        else if (freshWaypoint && axis.oldScroll >= waypoint.triggerPoint) {
+          waypoint.queueTrigger(axis.forward)
+          triggeredGroups[waypoint.group.id] = waypoint.group
+        }
+      }
+    }
+
+    Waypoint.requestAnimationFrame(function() {
+      for (var groupKey in triggeredGroups) {
+        triggeredGroups[groupKey].flushTriggers()
+      }
+    })
+
+    return this
+  }
+
+  /* Private */
+  Context.findOrCreateByElement = function(element) {
+    return Context.findByElement(element) || new Context(element)
+  }
+
+  /* Private */
+  Context.refreshAll = function() {
+    for (var contextId in contexts) {
+      contexts[contextId].refresh()
+    }
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/context-find-by-element */
+  Context.findByElement = function(element) {
+    return contexts[element.waypointContextKey]
+  }
+
+  window.onload = function() {
+    if (oldWindowLoad) {
+      oldWindowLoad()
+    }
+    Context.refreshAll()
+  }
+
+
+  Waypoint.requestAnimationFrame = function(callback) {
+    var requestFn = window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      requestAnimationFrameShim
+    requestFn.call(window, callback)
+  }
+  Waypoint.Context = Context
+}())
+;(function() {
+  'use strict'
+
+  function byTriggerPoint(a, b) {
+    return a.triggerPoint - b.triggerPoint
+  }
+
+  function byReverseTriggerPoint(a, b) {
+    return b.triggerPoint - a.triggerPoint
+  }
+
+  var groups = {
+    vertical: {},
+    horizontal: {}
+  }
+  var Waypoint = window.Waypoint
+
+  /* http://imakewebthings.com/waypoints/api/group */
+  function Group(options) {
+    this.name = options.name
+    this.axis = options.axis
+    this.id = this.name + '-' + this.axis
+    this.waypoints = []
+    this.clearTriggerQueues()
+    groups[this.axis][this.name] = this
+  }
+
+  /* Private */
+  Group.prototype.add = function(waypoint) {
+    this.waypoints.push(waypoint)
+  }
+
+  /* Private */
+  Group.prototype.clearTriggerQueues = function() {
+    this.triggerQueues = {
+      up: [],
+      down: [],
+      left: [],
+      right: []
+    }
+  }
+
+  /* Private */
+  Group.prototype.flushTriggers = function() {
+    for (var direction in this.triggerQueues) {
+      var waypoints = this.triggerQueues[direction]
+      var reverse = direction === 'up' || direction === 'left'
+      waypoints.sort(reverse ? byReverseTriggerPoint : byTriggerPoint)
+      for (var i = 0, end = waypoints.length; i < end; i += 1) {
+        var waypoint = waypoints[i]
+        if (waypoint.options.continuous || i === waypoints.length - 1) {
+          waypoint.trigger([direction])
+        }
+      }
+    }
+    this.clearTriggerQueues()
+  }
+
+  /* Private */
+  Group.prototype.next = function(waypoint) {
+    this.waypoints.sort(byTriggerPoint)
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
+    var isLast = index === this.waypoints.length - 1
+    return isLast ? null : this.waypoints[index + 1]
+  }
+
+  /* Private */
+  Group.prototype.previous = function(waypoint) {
+    this.waypoints.sort(byTriggerPoint)
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
+    return index ? this.waypoints[index - 1] : null
+  }
+
+  /* Private */
+  Group.prototype.queueTrigger = function(waypoint, direction) {
+    this.triggerQueues[direction].push(waypoint)
+  }
+
+  /* Private */
+  Group.prototype.remove = function(waypoint) {
+    var index = Waypoint.Adapter.inArray(waypoint, this.waypoints)
+    if (index > -1) {
+      this.waypoints.splice(index, 1)
+    }
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/first */
+  Group.prototype.first = function() {
+    return this.waypoints[0]
+  }
+
+  /* Public */
+  /* http://imakewebthings.com/waypoints/api/last */
+  Group.prototype.last = function() {
+    return this.waypoints[this.waypoints.length - 1]
+  }
+
+  /* Private */
+  Group.findOrCreate = function(options) {
+    return groups[options.axis][options.name] || new Group(options)
+  }
+
+  Waypoint.Group = Group
+}())
+;(function() {
+  'use strict'
+
+  var Waypoint = window.Waypoint
+
+  function isWindow(element) {
+    return element === element.window
+  }
+
+  function getWindow(element) {
+    if (isWindow(element)) {
+      return element
+    }
+    return element.defaultView
+  }
+
+  function NoFrameworkAdapter(element) {
+    this.element = element
+    this.handlers = {}
+  }
+
+  NoFrameworkAdapter.prototype.innerHeight = function() {
+    var isWin = isWindow(this.element)
+    return isWin ? this.element.innerHeight : this.element.clientHeight
+  }
+
+  NoFrameworkAdapter.prototype.innerWidth = function() {
+    var isWin = isWindow(this.element)
+    return isWin ? this.element.innerWidth : this.element.clientWidth
+  }
+
+  NoFrameworkAdapter.prototype.off = function(event, handler) {
+    function removeListeners(element, listeners, handler) {
+      for (var i = 0, end = listeners.length - 1; i < end; i++) {
+        var listener = listeners[i]
+        if (!handler || handler === listener) {
+          element.removeEventListener(listener)
+        }
+      }
+    }
+
+    var eventParts = event.split('.')
+    var eventType = eventParts[0]
+    var namespace = eventParts[1]
+    var element = this.element
+
+    if (namespace && this.handlers[namespace] && eventType) {
+      removeListeners(element, this.handlers[namespace][eventType], handler)
+      this.handlers[namespace][eventType] = []
+    }
+    else if (eventType) {
+      for (var ns in this.handlers) {
+        removeListeners(element, this.handlers[ns][eventType] || [], handler)
+        this.handlers[ns][eventType] = []
+      }
+    }
+    else if (namespace && this.handlers[namespace]) {
+      for (var type in this.handlers[namespace]) {
+        removeListeners(element, this.handlers[namespace][type], handler)
+      }
+      this.handlers[namespace] = {}
+    }
+  }
+
+  /* Adapted from jQuery 1.x offset() */
+  NoFrameworkAdapter.prototype.offset = function() {
+    if (!this.element.ownerDocument) {
+      return null
+    }
+
+    var documentElement = this.element.ownerDocument.documentElement
+    var win = getWindow(this.element.ownerDocument)
+    var rect = {
+      top: 0,
+      left: 0
+    }
+
+    if (this.element.getBoundingClientRect) {
+      rect = this.element.getBoundingClientRect()
+    }
+
+    return {
+      top: rect.top + win.pageYOffset - documentElement.clientTop,
+      left: rect.left + win.pageXOffset - documentElement.clientLeft
+    }
+  }
+
+  NoFrameworkAdapter.prototype.on = function(event, handler) {
+    var eventParts = event.split('.')
+    var eventType = eventParts[0]
+    var namespace = eventParts[1] || '__default'
+    var nsHandlers = this.handlers[namespace] = this.handlers[namespace] || {}
+    var nsTypeList = nsHandlers[eventType] = nsHandlers[eventType] || []
+
+    nsTypeList.push(handler)
+    this.element.addEventListener(eventType, handler)
+  }
+
+  NoFrameworkAdapter.prototype.outerHeight = function(includeMargin) {
+    var height = this.innerHeight()
+    var computedStyle
+
+    if (includeMargin && !isWindow(this.element)) {
+      computedStyle = window.getComputedStyle(this.element)
+      height += parseInt(computedStyle.marginTop, 10)
+      height += parseInt(computedStyle.marginBottom, 10)
+    }
+
+    return height
+  }
+
+  NoFrameworkAdapter.prototype.outerWidth = function(includeMargin) {
+    var width = this.innerWidth()
+    var computedStyle
+
+    if (includeMargin && !isWindow(this.element)) {
+      computedStyle = window.getComputedStyle(this.element)
+      width += parseInt(computedStyle.marginLeft, 10)
+      width += parseInt(computedStyle.marginRight, 10)
+    }
+
+    return width
+  }
+
+  NoFrameworkAdapter.prototype.scrollLeft = function() {
+    var win = getWindow(this.element)
+    return win ? win.pageXOffset : this.element.scrollLeft
+  }
+
+  NoFrameworkAdapter.prototype.scrollTop = function() {
+    var win = getWindow(this.element)
+    return win ? win.pageYOffset : this.element.scrollTop
+  }
+
+  NoFrameworkAdapter.extend = function() {
+    var args = Array.prototype.slice.call(arguments)
+
+    function merge(target, obj) {
+      if (typeof target === 'object' && typeof obj === 'object') {
+        for (var key in obj) {
+          if (obj.hasOwnProperty(key)) {
+            target[key] = obj[key]
+          }
+        }
+      }
+
+      return target
+    }
+
+    for (var i = 1, end = args.length; i < end; i++) {
+      merge(args[0], args[i])
+    }
+    return args[0]
+  }
+
+  NoFrameworkAdapter.inArray = function(element, array, i) {
+    return array == null ? -1 : array.indexOf(element, i)
+  }
+
+  NoFrameworkAdapter.isEmptyObject = function(obj) {
+    /* eslint no-unused-vars: 0 */
+    for (var name in obj) {
+      return false
+    }
+    return true
+  }
+
+  Waypoint.adapters.push({
+    name: 'noframework',
+    Adapter: NoFrameworkAdapter
+  })
+  Waypoint.Adapter = NoFrameworkAdapter
+}())
+;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+        value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var n = 1;
+
+var SlideShow = function () {
+        function SlideShow() {
+                _classCallCheck(this, SlideShow);
+
+                this.arrowLeft = (0, _jquery2.default)(".body-en__slide__arrow-l__icon");
+                this.arrowRight = (0, _jquery2.default)(".body-en__slide__arrow-r__icon");
+                this.slide1 = (0, _jquery2.default)(".body-en__slide__in1");
+                this.slide2 = (0, _jquery2.default)(".body-en__slide__in2");
+                this.slide3 = (0, _jquery2.default)(".body-en__slide__in3");
+                this.circle1 = (0, _jquery2.default)(".body-en__slide__circles__in__circle1");
+                this.circle2 = (0, _jquery2.default)(".body-en__slide__circles__in__circle2");
+                this.circle3 = (0, _jquery2.default)(".body-en__slide__circles__in__circle3");
+                this.events();
+        }
+
+        _createClass(SlideShow, [{
+                key: "events",
+                value: function events() {
+                        this.arrowRight.click(this.counterR.bind(this));
+                        this.arrowLeft.click(this.counterL.bind(this));
+                        this.arrowRight.click(this.circleChange.bind(this));
+                        this.arrowLeft.click(this.circleChange.bind(this));
+                }
+        }, {
+                key: "counterR",
+                value: function counterR() {
+
+                        if (n == 1) {
+                                //--Slide1--
+                                this.slide1.removeClass("body-en__slide__in1--rr");
+                                this.slide1.removeClass("body-en__slide__in1--r2");
+                                this.slide1.addClass("body-en__slide__in1--l1");
+                                this.slide1.removeClass("body-en__slide__in1--l2");
+                                this.slide1.removeClass("body-en__slide__in1--lr");
+                                this.slide1.removeClass("body-en__slide__in1--r1");
+                                //--Slide2--
+                                this.slide2.removeClass("body-en__slide__in2--r1");
+                                this.slide2.removeClass("body-en__slide__in2--rr");
+                                this.slide2.removeClass("body-en__slide__in2--r2");
+                                this.slide2.removeClass("body-en__slide__in2--l1");
+                                this.slide2.removeClass("body-en__slide__in2--lr");
+                                this.slide2.addClass("body-en__slide__in2--l2");
+                                //--Slide3--
+                                this.slide3.removeClass("body-en__slide__in3--r1");
+                                this.slide3.removeClass("body-en__slide__in3--rr");
+                                this.slide3.removeClass("body-en__slide__in3--r2");
+                                this.slide3.removeClass("body-en__slide__in3--l1");
+                                this.slide3.addClass("body-en__slide__in3--lr");
+                                this.slide3.removeClass("body-en__slide__in3--l2");
+                        } else if (n == 2) {
+                                //--Slide1--
+                                this.slide1.removeClass("body-en__slide__in1--rr");
+                                this.slide1.removeClass("body-en__slide__in1--r2");
+                                this.slide1.removeClass("body-en__slide__in1--l1");
+                                this.slide1.removeClass("body-en__slide__in1--l2");
+                                this.slide1.addClass("body-en__slide__in1--lr");
+                                this.slide1.removeClass("body-en__slide__in1--r1");
+                                //--Slide2--
+                                this.slide2.removeClass("body-en__slide__in2--r1");
+                                this.slide2.removeClass("body-en__slide__in2--rr");
+                                this.slide2.removeClass("body-en__slide__in2--r2");
+                                this.slide2.addClass("body-en__slide__in2--l1");
+                                this.slide2.removeClass("body-en__slide__in2--lr");
+                                this.slide2.removeClass("body-en__slide__in2--l2");
+                                //--Slide3--
+                                this.slide3.removeClass("body-en__slide__in3--r1");
+                                this.slide3.removeClass("body-en__slide__in3--rr");
+                                this.slide3.removeClass("body-en__slide__in3--r2");
+                                this.slide3.removeClass("body-en__slide__in3--l1");
+                                this.slide3.removeClass("body-en__slide__in3--lr");
+                                this.slide3.addClass("body-en__slide__in3--l2");
+                        } else {
+                                //--Slide1--
+                                this.slide1.removeClass("body-en__slide__in1--rr");
+                                this.slide1.removeClass("body-en__slide__in1--r2");
+                                this.slide1.removeClass("body-en__slide__in1--l1");
+                                this.slide1.addClass("body-en__slide__in1--l2");
+                                this.slide1.removeClass("body-en__slide__in1--lr");
+                                this.slide1.removeClass("body-en__slide__in1--r1");
+                                //--Slide2--
+                                this.slide2.removeClass("body-en__slide__in2--r1");
+                                this.slide2.removeClass("body-en__slide__in2--rr");
+                                this.slide2.removeClass("body-en__slide__in2--r2");
+                                this.slide2.removeClass("body-en__slide__in2--l1");
+                                this.slide2.addClass("body-en__slide__in2--lr");
+                                this.slide2.removeClass("body-en__slide__in2--l2");
+                                //--Slide3--
+                                this.slide3.removeClass("body-en__slide__in3--r1");
+                                this.slide3.removeClass("body-en__slide__in3--rr");
+                                this.slide3.removeClass("body-en__slide__in3--r2");
+                                this.slide3.addClass("body-en__slide__in3--l1");
+                                this.slide3.removeClass("body-en__slide__in3--lr");
+                                this.slide3.removeClass("body-en__slide__in3--l2");
+                        }
+                        n = n + 1;
+                        if (n > 3) {
+                                n = 1;
+                        }
+                }
+                //--end-counterR--
+
+
+        }, {
+                key: "counterL",
+                value: function counterL() {
+
+                        if (n == 1) {
+                                //--Slide1--
+                                this.slide1.removeClass("body-en__slide__in1--rr");
+                                this.slide1.removeClass("body-en__slide__in1--r2");
+                                this.slide1.removeClass("body-en__slide__in1--l1");
+                                this.slide1.removeClass("body-en__slide__in1--l2");
+                                this.slide1.removeClass("body-en__slide__in1--lr");
+                                this.slide1.addClass("body-en__slide__in1--r1");
+                                //--Slide2--
+                                this.slide2.removeClass("body-en__slide__in2--r1");
+                                this.slide2.addClass("body-en__slide__in2--rr");
+                                this.slide2.removeClass("body-en__slide__in2--r2");
+                                this.slide2.removeClass("body-en__slide__in2--l1");
+                                this.slide2.removeClass("body-en__slide__in2--lr");
+                                this.slide2.removeClass("body-en__slide__in2--l2");
+                                //--Slide3--
+                                this.slide3.removeClass("body-en__slide__in3--r1");
+                                this.slide3.removeClass("body-en__slide__in3--rr");
+                                this.slide3.addClass("body-en__slide__in3--r2");
+                                this.slide3.removeClass("body-en__slide__in3--l1");
+                                this.slide3.removeClass("body-en__slide__in3--lr");
+                                this.slide3.removeClass("body-en__slide__in3--l2");
+                        } else if (n == 2) {
+                                //--Slide1--
+                                this.slide1.removeClass("body-en__slide__in1--rr");
+                                this.slide1.addClass("body-en__slide__in1--r2");
+                                this.slide1.removeClass("body-en__slide__in1--l1");
+                                this.slide1.removeClass("body-en__slide__in1--l2");
+                                this.slide1.removeClass("body-en__slide__in1--lr");
+                                this.slide1.removeClass("body-en__slide__in1--r1");
+                                //--Slide2--
+                                this.slide2.addClass("body-en__slide__in2--r1");
+                                this.slide2.removeClass("body-en__slide__in2--rr");
+                                this.slide2.removeClass("body-en__slide__in2--r2");
+                                this.slide2.removeClass("body-en__slide__in2--l1");
+                                this.slide2.removeClass("body-en__slide__in2--lr");
+                                this.slide2.removeClass("body-en__slide__in2--l2");
+                                //--Slide3--
+                                this.slide3.removeClass("body-en__slide__in3--r1");
+                                this.slide3.addClass("body-en__slide__in3--rr");
+                                this.slide3.removeClass("body-en__slide__in3--r2");
+                                this.slide3.removeClass("body-en__slide__in3--l1");
+                                this.slide3.removeClass("body-en__slide__in3--lr");
+                                this.slide3.removeClass("body-en__slide__in3--l2");
+                        } else {
+                                //--Slide1--
+                                this.slide1.addClass("body-en__slide__in1--rr");
+                                this.slide1.removeClass("body-en__slide__in1--r2");
+                                this.slide1.removeClass("body-en__slide__in1--l1");
+                                this.slide1.removeClass("body-en__slide__in1--l2");
+                                this.slide1.removeClass("body-en__slide__in1--lr");
+                                this.slide1.removeClass("body-en__slide__in1--r1");
+                                //--Slide2--
+                                this.slide2.removeClass("body-en__slide__in2--r1");
+                                this.slide2.removeClass("body-en__slide__in2--rr");
+                                this.slide2.addClass("body-en__slide__in2--r2");
+                                this.slide2.removeClass("body-en__slide__in2--l1");
+                                this.slide2.removeClass("body-en__slide__in2--lr");
+                                this.slide2.removeClass("body-en__slide__in2--l2");
+                                //--Slide3--
+                                this.slide3.addClass("body-en__slide__in3--r1");
+                                this.slide3.removeClass("body-en__slide__in3--rr");
+                                this.slide3.removeClass("body-en__slide__in3--r2");
+                                this.slide3.removeClass("body-en__slide__in3--l1");
+                                this.slide3.removeClass("body-en__slide__in3--lr");
+                                this.slide3.removeClass("body-en__slide__in3--l2");
+                        }
+                        n = n - 1;
+                        if (n < 1) {
+                                n = 3;
+                        }
+                }
+                //--end-counterL--
+
+
+        }, {
+                key: "circleChange",
+                value: function circleChange() {
+                        if (n == 1) {
+                                this.circle1.removeClass("body-en__slide__circles__in__circle1--grey");
+                                this.circle2.removeClass("body-en__slide__circles__in__circle2--white");
+                                this.circle3.removeClass("body-en__slide__circles__in__circle3--white");
+                        } else if (n == 2) {
+                                this.circle1.addClass("body-en__slide__circles__in__circle1--grey");
+                                this.circle3.removeClass("body-en__slide__circles__in__circle3--white");
+                                this.circle2.addClass("body-en__slide__circles__in__circle2--white");
+                        } else {
+                                this.circle1.addClass("body-en__slide__circles__in__circle1--grey");
+                                this.circle2.removeClass("body-en__slide__circles__in__circle2--white");
+                                this.circle3.addClass("body-en__slide__circles__in__circle3--white");
+                        }
+                }
+        }]);
+
+        return SlideShow;
+}();
+
+exports.default = SlideShow;
 
 /***/ })
 /******/ ]);

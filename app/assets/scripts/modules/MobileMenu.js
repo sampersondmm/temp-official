@@ -7,17 +7,16 @@ class MobileMenu {
         this.menuContent = $(".mobile-menu-bin__menu-content");
         this.events();
     }
-    
-    events() { 
+
+    events() {
         this.menuIcon.click(this.toggleTheMenu.bind(this));
     }
 
     toggleTheMenu() {
         this.menuContent.toggleClass("mobile-menu-bin__menu-content--is-visible");
         this.menuScreen.toggleClass("body-bin--is-screened");
-    } 
+        this.menuIcon.toggleClass('mobile-menu-bin__menu-icon--close-x');
+    }
 }
 
 export default MobileMenu;
- 
-  

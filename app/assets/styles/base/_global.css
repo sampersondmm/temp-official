@@ -11,18 +11,27 @@ html {
 
 *, *:before, *:after {
     box-sizing: inherit;
-} 
+}
 
 .clearfix:after {
-    content: "."; 
-    display: block; 
-    height: 0; 
-    clear: both; 
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
     visibility: hidden;
 }
 
 a {
     text-decoration: none;
+}
+
+.waypoint-anchor {
+  height:1px;
+  width:1px;
+  position:absolute;
+  top:-73px;
+  left:500px;
+  z-index:10;
 }
 
 
@@ -32,4 +41,4 @@ a {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 /* End hide from IE-mac */
-/* @end */ 
+/* @end */

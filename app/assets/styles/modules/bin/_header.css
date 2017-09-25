@@ -1,33 +1,34 @@
 .header-bin {
     height:90px;
     position:relative;
+    z-index: 6;
     background:linear-gradient(#3e521c, #52692b);
-    
+
     @mixin atMedium {
         height:110px;
     }
-    
+
     @mixin atLarge {
         height:130px;
     }
-    
+
     &__title-box {
-    
+
         display:inline-block;
         margin:25px 0 0 130px;
-        
+
         @mixin atMedium {
             margin:30px 0 0 180px;
         }
-        
+
         @mixin atLarge {
             margin:35px 0 0 200px;
         }
-        
-        
+
+
         &__title {
             font-size:25px;
-            
+
             @mixin atMedium {
                 font-size:30px;
             }
@@ -37,9 +38,9 @@
         }
 
          &__sub-title {
-             
+
              font-size: 15px;
-             
+
              @mixin atMedium {
                  font-size:20px;
              }
@@ -47,9 +48,9 @@
                  font-size:22px;
              }
         }
-        
+
     }
-    
+
     &__nav {
         display:none;
         position:absolute;
@@ -57,49 +58,49 @@
         top:110px;
         left:190px;
         border:1px solid black;
-        
+
         @mixin atLarge {
             display:block;
         }
     }
-    
+
     &__nav-li {
-        
+
         list-style: none;
         float:left;
-        
+
     }
-    
+
     &__nav-li:last-child {
         color:skyblue;
-        
+
     }
-    
+
     &__nav-li:first-child {
-        
-        
+
+
     }
-    
+
     &__nav-a {
-        
+
         text-decoration: none;
         display:block;
         padding:7px 15px;
         background:white;
         color:black;
-        
+
     }
-    
-    
+
+
     &__nav-a:hover {
-        
+
         background: black;
         color: white;
-        
+
     }
-    
+
     &__logo-box {
-        
+
         height:140px;
         width:100px;
         border:1px solid black;
@@ -109,22 +110,21 @@
         background:black;
         border-radius: 50%;
         z-index:3;
-        
+
         @mixin atMedium {
             top:30px;
             left:30px;
             height:160px;
             width:120px;
         }
-        
+
         @mixin atLarge {
             height:190px;
             width:140px;
         }
-        
+
     }
-    
 
-    
+
+
 }
-

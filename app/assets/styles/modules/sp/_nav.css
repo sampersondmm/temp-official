@@ -3,11 +3,11 @@
     display:none;
     position:relative;
     background: white;
-    
+
     @mixin atLarge {
         display:block;
     }
-    
+
         &__ul {
             display:inline-block;
             float:right;
@@ -34,9 +34,9 @@
         }
 
         &__a:hover {
-            border-bottom:3px solid $code-black;
+            border-bottom:3px solid black;
         }
-    
+
     }
-    
+
 }
